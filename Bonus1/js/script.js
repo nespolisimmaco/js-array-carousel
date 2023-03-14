@@ -26,37 +26,45 @@ const previousButton = document.querySelector(".previous");
 let activeItemIndex = 0;
 items[activeItemIndex].classList.add("active-item");
 // Aggiungo l'event listener ai bottoni
-// SE siamo al primo elemento il bottone scompare
-if (activeItemIndex === 0) {
-    previousButton.classList.add("hidden");
-}
 // Bottone "precedente"
 previousButton.addEventListener("click", function () {
-    // Quando clicco su questo bottone, tolgo active all'elemento corrente
-    items[activeItemIndex].classList.remove("active-item");
-    // Diminusico l'indice
-    activeItemIndex--;
-    // E assegno active all'elemento successivo
-    items[activeItemIndex].classList.add("active-item");
-    // SE siamo al primo elemento il bottone scompare
+    // SE siamo al primo elemento
+    //  dobbiamo andare all'ultimo elemento
+    // ALTRIMENTI
+    //  si scende a partire dall'elemento corrente
     if (activeItemIndex === 0) {
-        previousButton.classList.add("hidden");
+        items[activeItemIndex].classList.remove("active-item");
+        activeItemIndex = items.length - 1;
+        console.log(activeItemIndex);
+        items[activeItemIndex].classList.add("active-item");
+    } else {
+        // Quando clicco su questo bottone, tolgo active all'elemento corrente
+        items[activeItemIndex].classList.remove("active-item");
+        // Diminusico l'indice
+        activeItemIndex--;
+        console.log(activeItemIndex);
+        // E assegno active all'elemento successivo
+        items[activeItemIndex].classList.add("active-item");
     }
-    // Tolgo hidden al bottone "successivo" (nel caso in cui lo abbia, ossia all'ultimo elemento)
-    nextButton.classList.remove("hidden");
 })
 // Bottone "successivo"
 nextButton.addEventListener("click", function () {
-    // Quando clicco su questo bottone, tolgo active all'elemento corrente
-    items[activeItemIndex].classList.remove("active-item");
-    // Aumento l'indice
-    activeItemIndex++;
-    // E assegno active all'elemento successivo
-    items[activeItemIndex].classList.add("active-item");
-    // SE siamo all'ultimo elemento scompare il bottone
+    // SE siamo all'ultimo elemento
+    //  dobbiamo andare al primo elemento
+    // ALTRIMENTI
+    //  si sale a partire dall'elemento corrente
     if (activeItemIndex === items.length - 1) {
-        nextButton.classList.add("hidden");
+        items[activeItemIndex].classList.remove("active-item");
+        activeItemIndex = 0;
+        console.log(activeItemIndex);
+        items[activeItemIndex].classList.add("active-item");
+    } else {
+        // Quando clicco su questo bottone, tolgo active all'elemento corrente
+        items[activeItemIndex].classList.remove("active-item");
+        // Aumento l'indice
+        activeItemIndex++;
+        console.log(activeItemIndex);
+        // E assegno active all'elemento successivo
+        items[activeItemIndex].classList.add("active-item");
     }
-    // Tolgo hidden al bottone "precedente" (nel caso in cui lo abbia, ossia al primo elemento)
-    previousButton.classList.remove("hidden");
 })
