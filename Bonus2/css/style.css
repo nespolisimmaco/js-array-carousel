@@ -50,16 +50,12 @@ img {
 .images-list {
     width: 20%;
     position: relative;
-    /* debug */
-    background-color: brown;
 }
 
 .thumbnail {
     height: calc(60vh / 5);
     width: 100%;
     filter: brightness(50%);
-    /* debug */
-    border: 1px solid black;
 }
 
 .active-thumbnail {
@@ -83,12 +79,14 @@ img {
 .images-list .next {
     bottom: 10px;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
 }
 
 .images-list .previous {
     top: 10px;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
 }
 
