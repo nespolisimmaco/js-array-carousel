@@ -8,12 +8,17 @@ const images = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.
 // Contenitore delle immagini dello slider
 const sliderItems = document.querySelector(".slider-items");
 console.log(sliderItems);
+const thumbnailItems = document.querySelector(".images-list");
 // Ciclo for per inserire dinamicamente gli item (immagini)
 for (let i = 0; i < images.length; i++ ) {
     sliderItems.innerHTML += `
     <div class="item">
         <img src="${images[i]}" alt="Landscape">
-    </div>`                            
+    </div>`  
+    thumbnailItems.innerHTML += `
+    <div class="thumbnail">
+        <img src="${images[i]}" alt="Landscape">
+    </div>`                           
 }
 
 // Stato iniziale
