@@ -23,6 +23,7 @@ img {
 /* ----- Slider ----- */
 .slider {
     width: 100%;
+    position: relative;
     /* debug */
     background-color: brown;
 }
@@ -47,4 +48,29 @@ img {
 /* active item */
 .active-item {
     display: block;
+}
+
+/* Navigation buttons of the slider */
+.next,
+.previous {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.slider .next {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider .previous {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
