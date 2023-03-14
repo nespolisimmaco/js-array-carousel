@@ -11,22 +11,22 @@ img {
 
 /* ********** GENERAL ********** */
 .container {
-    width: 50%;
+    width: 60%;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
-/* ----- Slider ----- */
+/* ---------- Slider ---------- */
 .slider {
     width: 100%;
-    position: relative;
+    display: flex;
 }
 
-/* Slider items (images) */
+/* -- Slider items (images, left part of the slider) -- */
 .slider-items {
-    width: 100%;
+    width: 80%;
     height: 60vh;
 }
 
@@ -46,6 +46,14 @@ img {
     display: block;
 }
 
+/* -- Images list (right part of the slider) -- */
+.images-list {
+    width: 20%;
+    position: relative;
+    /* debug */
+    background-color: brown;
+}
+
 /* Navigation buttons of the slider */
 .next,
 .previous {
@@ -59,13 +67,13 @@ img {
     position: absolute;
 }
 
-.slider .next {
+.images-list .next {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.slider .previous {
+.images-list .previous {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
