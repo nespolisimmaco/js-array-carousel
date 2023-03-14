@@ -42,3 +42,13 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+/* active item */
+.active-item {
+    display: none;
+}
+
+/* hidden item */
+.hidden-item {
+    display: block;
+}
