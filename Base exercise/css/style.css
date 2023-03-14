@@ -16,16 +16,12 @@ img {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    /* debug */
-    background-color: aquamarine;
 }
 
 /* ----- Slider ----- */
 .slider {
     width: 100%;
     position: relative;
-    /* debug */
-    background-color: brown;
 }
 
 /* Slider items (images) */

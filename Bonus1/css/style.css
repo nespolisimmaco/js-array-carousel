@@ -1,0 +1,76 @@
+/* ********** RESET ********** */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ********** GENERAL ********** */
+.container {
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* ----- Slider ----- */
+.slider {
+    width: 100%;
+    position: relative;
+}
+
+/* Slider items (images) */
+.slider-items {
+    width: 100%;
+    height: 60vh;
+}
+
+.item {
+    height: 100%;
+    display: none;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* active item */
+.active-item {
+    display: block;
+}
+
+/* Navigation buttons of the slider */
+.next,
+.previous {
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.slider .next {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider .previous {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none;
+}
